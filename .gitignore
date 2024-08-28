@@ -1,0 +1,19 @@
+# Ignore Terraform directories and files
+terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.0.1/darwin_amd64/terraform-provider-azurerm_v4.0.1_x5
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.log
+crash.log
+override.tf
+override.tf.json
+terraform.tfstate
+terraform.tfstate.backup
+.terraformrc
+terraform.rc
+
+# Exclude providers to avoid large files
+.terraform/providers/
