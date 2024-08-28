@@ -3,30 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>John Doe's Resume</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .counter {
-            text-align: center;
-            font-size: 2em;
-            color: #333;
-        }
-    </style>
 </head>
 <body>
-    <div class="counter">
-        VDC: <span id="counter">Loading...</span>
+    <div class="resume-container">
+        <header>
+            <h1>John Doe</h1>
+            <p>Software Developer</p>
+            <p>Email: john.doe@example.com | Phone: (123) 456-7890</p>
+            <p>LinkedIn: linkedin.com/in/johndoe</p>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p>
+                Experienced software developer with a strong background in web development and cloud computing.
+                Skilled in JavaScript, HTML, CSS, and Azure services.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Software Developer at Tech Solutions</h3>
+                <p class="date">Jan 2020 - Present</p>
+                <p>
+                    Developed and maintained web applications using JavaScript, React, and Node.js.
+                    Implemented CI/CD pipelines using Azure DevOps.
+                </p>
+            </div>
+            <div class="job">
+                <h3>Web Developer at Creative Agency</h3>
+                <p class="date">Jun 2018 - Dec 2019</p>
+                <p>
+                    Designed and developed responsive websites using HTML, CSS, and JavaScript.
+                    Collaborated with clients to create custom web solutions.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>Bachelor of Science in Computer Science, University of Somewhere, 2018</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>Azure Services</li>
+                <li>React & Node.js</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <p>Microsoft Certified: Azure Developer Associate</p>
+        </section>
+
+        <div class="counter">
+            Visitor Count: <span id="counter"></span>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

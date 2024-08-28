@@ -1,54 +1,83 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.resume {
-    background: #fff;
+.resume-container {
+    background-color: #fff;
     padding: 20px;
-    width: 700px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 header h1 {
+    font-size: 2.5em;
     margin: 0;
-    font-size: 2em;
 }
 
-#counter {
-    font-size: 3em;
-    font-weight: bold;
+header p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #555;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
     color: #0078d4;
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 20px;
-    animation: pulse 0.5s ease-out;
+    border-bottom: 2px solid #0078d4;
+    padding-bottom: 5px;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        background-color: #f0f0f0;
-    }
-    50% {
-        transform: scale(1.1);
-        background-color: #e0e0e0;
-    }
-    100% {
-        transform: scale(1);
-        background-color: #f0f0f0;
-    }
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.job .date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+ul.skills {
+    list-style: none;
+    padding: 0;
+}
+
+ul.skills li {
+    background-color: #0078d4;
+    color: white;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.counter {
+    text-align: center;
+    font-size: 1.5em;
+    color: #0078d4;
+    margin-top: 20px;
 }
