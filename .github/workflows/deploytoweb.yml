@@ -12,7 +12,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: Log in to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Upload to Azure Storage
       uses: Azure/cli@v1
       with:
@@ -27,7 +30,4 @@ jobs:
           --resource-group ${{ secrets.RESOURCE_GROUP_NAME }} \
           --content-paths '/*'
 
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
