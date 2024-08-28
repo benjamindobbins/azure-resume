@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('.content-section');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
     const counterElement = document.getElementById('counter');
 
     // Function to fetch the visitor count from the Azure Function

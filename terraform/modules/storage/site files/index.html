@@ -3,65 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe's Resume</title>
+    <title>Stylish Resume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="resume-container">
-        <header>
-            <h1>John Doe</h1>
-            <p>Software Developer</p>
-            <p>Email: john.doe@example.com | Phone: (123) 456-7890</p>
-            <p>LinkedIn: linkedin.com/in/johndoe</p>
-        </header>
+    <header>
+        <h1>John Doe</h1>
+        <p>Software Developer</p>
+    </header>
 
-        <section>
-            <h2>Summary</h2>
-            <p>
-                Experienced software developer with a strong background in web development and cloud computing.
-                Skilled in JavaScript, HTML, CSS, and Azure services.
-            </p>
-        </section>
+    <nav>
+        <button class="nav-btn" data-section="experience">Experience</button>
+        <button class="nav-btn" data-section="skills">Skills</button>
+        <button class="nav-btn" data-section="education">Education</button>
+        <button class="nav-btn" data-section="contact">Contact</button>
+    </nav>
 
-        <section>
-            <h2>Experience</h2>
-            <div class="job">
-                <h3>Software Developer at Tech Solutions</h3>
-                <p class="date">Jan 2020 - Present</p>
-                <p>
-                    Developed and maintained web applications using JavaScript, React, and Node.js.
-                    Implemented CI/CD pipelines using Azure DevOps.
-                </p>
-            </div>
-            <div class="job">
-                <h3>Web Developer at Creative Agency</h3>
-                <p class="date">Jun 2018 - Dec 2019</p>
-                <p>
-                    Designed and developed responsive websites using HTML, CSS, and JavaScript.
-                    Collaborated with clients to create custom web solutions.
-                </p>
-            </div>
-        </section>
+    <section id="experience" class="content-section">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Software Developer at Tech Solutions</h3>
+            <p>Jan 2020 - Present</p>
+            <p>Developed and maintained web applications using JavaScript, React, and Node.js.</p>
+        </div>
+    </section>
 
-        <section>
-            <h2>Education</h2>
-            <p>Bachelor of Science in Computer Science, University of Somewhere, 2018</p>
-        </section>
+    <section id="skills" class="content-section">
+        <h2>Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>HTML & CSS</li>
+            <li>Azure Services</li>
+            <li>React & Node.js</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>JavaScript</li>
-                <li>HTML & CSS</li>
-                <li>Azure Services</li>
-                <li>React & Node.js</li>
-            </ul>
-        </section>
+    <section id="education" class="content-section">
+        <h2>Education</h2>
+        <p>Bachelor of Science in Computer Science, University of Somewhere, 2018</p>
+    </section>
 
-        <section>
-            <h2>Certifications</h2>
-            <p>Microsoft Certified: Azure Developer Associate</p>
-        </section>
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>Email: john.doe@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
 
         <div class="counter">
             Visitor Count: <span id="counter"></span>
