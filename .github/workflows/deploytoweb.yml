@@ -18,3 +18,11 @@ jobs:
       with:
         inlineScript: |
           az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --destination '$web' --source 'terraform/modules/storage/site files' --overwrite
+
+    - name: 'Purge Azure CDN'
+      run: |
+        az cdn endpoint purge \
+          --profile-name ${{ secrets.CDN_PROFILE_NAME }} \
+          --name ${{ secrets.CDN_ENDPOINT_NAME }} \
+          --resource-group ${{ secrets.RESOURCE_GROUP_NAME }} \
+          --content-paths '/*'
