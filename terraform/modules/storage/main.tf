@@ -11,8 +11,7 @@ resource "azurerm_storage_account" "storage" {
   cross_tenant_replication_enabled = false
   shared_access_key_enabled = true
   min_tls_version = "TLS1_2"
-  https_traffic_only_enabled = true
-
+  
   network_rules {
     default_action = "Allow"
     bypass         = ["AzureServices"]
